@@ -164,6 +164,7 @@ header .themeSelector .activeTheme{
   box-shadow: 3px 3px rgba(211, 211, 211, 0.289);
   border-radius: 5px;
   border-left: 5px solid #004AAD;
+  border-bottom: 5px solid #004AAD;
 }
 
 .showTask li:hover{
