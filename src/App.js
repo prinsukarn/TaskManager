@@ -7,11 +7,10 @@ import { ShowTask } from "./components/ShowTask";
 import "./App.css";
 
 function App() {
+  const [task, setTask] = useState({});
   const [tasklist, setTasklist] = useState(
     JSON.parse(localStorage.getItem("tasklist")) || []
   );
-  const [task, setTask] = useState({});
-  const [complete, setComplete] = useState({});
 
   useEffect(() => {
     localStorage.setItem("tasklist", JSON.stringify(tasklist));
