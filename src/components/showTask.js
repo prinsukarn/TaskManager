@@ -20,20 +20,26 @@ export const ShowTask = ({ tasklist, setTasklist, task, setTask }) => {
           Clear All
         </button>
       </div>
+
       <ul>
         {tasklist.map((todo) => (
           <li key={todo.id}>
             <p>
               <span className="name">{todo.name}</span>
+              <span className="description">{todo.description}</span>
               <span className="time">{todo.time}</span>
             </p>
+
             <i
               onClick={() => handleEdit(todo.id)}
               className="bi bi-pencil-square"
+              title="Edit Task"
             ></i>
+
             <i
               onClick={() => handleDelete(todo.id)}
               className="bi bi-trash-fill"
+              title="Delete Task"
             ></i>
           </li>
         ))}

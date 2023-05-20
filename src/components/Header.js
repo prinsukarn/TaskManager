@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "../assets/TaskManager.png";
+import logo from "../assets/TaskManagerlogo.png";
 
 export const Header = () => {
   const [theme, setTheme] = useState(

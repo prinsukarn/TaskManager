@@ -53,8 +53,8 @@ header .themeSelector .activeTheme{
   padding: 20px 15px;
   border-radius: 5px;
   background-color: #FFFFFF;
-  max-width: 500px;
   margin: 20px auto;
+  max-width: 1000px;
   box-shadow: var(--box-shadow);
 }
 
@@ -64,7 +64,8 @@ header .themeSelector .activeTheme{
 }
 
 .addTask form input{
-  flex-grow: 1;
+  flex-grow: 2;
+  background-color: white;
   padding: 5px 5px;
   border: 1px solid #eaeaea;
   border-radius: 5px;
@@ -73,6 +74,12 @@ header .themeSelector .activeTheme{
 
 .addTask form input:focus{
   outline: 0.5px solid #eaeaea;
+  background-color: whitesmoke;
+}
+
+.addTask form input:hover{
+  outline: 0.5px solid #eaeaea;
+  background-color: whitesmoke;
 }
 
 .addTask form button{
@@ -86,7 +93,7 @@ header .themeSelector .activeTheme{
 }
 
 .addTask form button:hover{
-  background-color: #03b056;
+  background-color: darkgreen;
 }
 
 .showTask{
@@ -94,7 +101,7 @@ header .themeSelector .activeTheme{
   border-radius: 5px;
   background-color: #FFFFFF;
   margin: 20px auto;
-  box-shadow: var(--box-shadow);
+  height: 100%;
 }
 
 .showTask div.head{
@@ -111,6 +118,7 @@ header .themeSelector .activeTheme{
 .showTask .title{
   font-size: 18px;
   font-weight: 600;
+  color:#004AAD;
   user-select: none;
 }
 
@@ -124,7 +132,7 @@ header .themeSelector .activeTheme{
 }
 
 .showTask .clearAll{
-  background-color: #0f6af3;
+  background-color: #004AAD;
   color: #FFFFFF;
   padding: 5px 10px;
   border-radius: 5px;
@@ -134,7 +142,7 @@ header .themeSelector .activeTheme{
 }
 
 .showTask .clearAll:hover{
-  background-color: #1061db;
+  background-color: red;
 }
 
 .showTask ul{
@@ -148,17 +156,18 @@ header .themeSelector .activeTheme{
 
 .showTask li{
   padding: 15px 10px;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid ghostwhite;
+  background-color: whitesmoke;
   display: flex;
   gap: 5px;
-  width: 350px;
-  box-shadow: var(--box-shadow);
+  width: 300px;
+  box-shadow: 3px 3px rgba(211, 211, 211, 0.289);
   border-radius: 5px;
-  border-left: 5px solid #1365dfaf;
+  border-left: 5px solid #004AAD;
 }
 
 .showTask li:hover{
-  background-color: #f8f8f8;
+  background-color: ghostwhite;
 }
 
 .showTask li p{
@@ -174,23 +183,39 @@ header .themeSelector .activeTheme{
 
 .showTask li .time{
   font-size: 12px;
-  color: #737373;
+  color: gray;
 }
 
 .showTask i.bi-pencil-square{
   font-size: 18px;
-  color: #1363DF;
+  color: #1f3d6b;
   cursor: pointer;
 }
 
-.showTask i.bi-trash{
+.showTask i.bi-pencil-square:hover{
+  font-size: 19px;
+  color: rgb(49, 197, 255);
+  cursor: pointer;
+}
+
+.showTask i.bi-trash-fill{
   font-size: 18px;
-  color: #D82148;
+  color: rgb(181, 14, 14);
+  cursor: pointer;
+}
+
+.showTask i.bi-trash-fill:hover{
+  font-size: 18px;
+  color: red;
   cursor: pointer;
 }
 
 @media only screen and (max-width: 800px) {
   .showTask li{
     width: 100%;
+  }
+  
+  .addTask form{
+    display: grid;
   }
 }
