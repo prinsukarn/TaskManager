@@ -41,7 +41,7 @@ export const AddTask = ({ tasklist, setTasklist, task, setTask }) => {
           placeholder="add task"
           maxLength="25"
         />
-        <button type="submit">Add</button>
+        <button type="submit">{task.id ? "Update" : "Add"}</button>
       </form>
     </section>
   );
