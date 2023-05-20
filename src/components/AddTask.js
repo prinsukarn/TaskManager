@@ -1,5 +1,18 @@
 import React from "react";
 
 export const AddTask = () => {
-  return <div>AddTask</div>;
+  return (
+    <section className="addTask">
+      <form>
+        <input
+          type="text"
+          name="task"
+          autoComplete="off"
+          placeholder="Add Task"
+          maxLength="50"
+        />
+        <button type="submit">Add Task</button>
+      </form>
+    </section>
+  );
 };
