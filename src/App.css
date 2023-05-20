@@ -30,7 +30,7 @@
 }
 
 .medium{
-  background-color: gray;
+  background-color: #EFEFEF;
   transition: all 500ms;
 }
 
@@ -39,16 +39,15 @@
   transition: all 500ms;
 }
 
-.gradient1{
+.gradientOne{
   background: linear-gradient(90deg, hsla(191, 75%, 60%, 1) 0%, hsla(248, 87%, 36%, 1) 100%);
 }
-
-.gradient2{
+.gradientTwo{
   background: linear-gradient(235deg, #FFFFFF 0%, #000F25 100%), linear-gradient(180deg, #6100FF 0%, #000000 100%), linear-gradient(235deg, #FFA3AC 0%, #FFA3AC 40%, #00043C calc(40% + 1px), #00043C 60%, #005D6C calc(60% + 1px), #005D6C 70%, #00C9B1 calc(70% + 1px), #00C9B1 100%), linear-gradient(125deg, #FFA3AC 0%, #FFA3AC 40%, #00043C calc(40% + 1px), #00043C 60%, #005D6C calc(60% + 1px), #005D6C 70%, #00C9B1 calc(70% + 1px), #00C9B1 100%);
   background-blend-mode: soft-light, screen, darken, normal;
 }
 
-.gradient3{
+.gradientThree{
   background: linear-gradient(125deg, #FFFFFF 0%, #000000 100%), linear-gradient(200deg, #FFD9E8 0%, #FFD9E8 50%, #DE95BA calc(50% + 1px), #DE95BA 60%, #7F4A88 calc(60% + 1px), #7F4A88 75%, #4A266A calc(75% + 1px), #4A266A 100%), linear-gradient(113deg, #FFD9E8 0%, #FFD9E8 40%, #DE95BA calc(40% + 1px), #DE95BA 50%, #7F4A88 calc(50% + 1px), #7F4A88 70%, #4A266A calc(70% + 1px), #4A266A 100%);
   background-blend-mode: overlay, overlay, normal;
 }
@@ -104,7 +103,6 @@ header .themeSelector .activeTheme{
   max-width: 500px;
   margin: 20px auto;
   box-shadow: var(--box-shadow);
-  
 }
 
 .addTask form{
@@ -122,12 +120,11 @@ header .themeSelector .activeTheme{
 
 .addTask form input:focus{
   outline: 0.5px solid #eaeaea;
-  background-color: seashell;
 }
 
 .addTask form button{
-  background-color: green;
-  color: #ffffff;
+  background-color: #03ba5c;
+  color: #FFFFFF;
   border: none;
   padding: 5px 20px;
   border-radius: 5px;
@@ -136,5 +133,109 @@ header .themeSelector .activeTheme{
 }
 
 .addTask form button:hover{
-  background-color: #03ba5c;
+  background-color: #03b056;
+}
+
+.taskList{
+  padding: 20px 15px;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  margin: 20px auto;
+  box-shadow: var(--box-shadow);
+}
+
+.taskList p.head{
+  padding: 10px 0px 20px 0px;
+  border-bottom: 1px solid #dfdfdf;
+  display: flex;
+  align-items: center;
+}
+
+.taskList p.head span:first-child{
+  flex-grow: 1;
+}
+
+.taskList .title{
+  font-size: 18px;
+  font-weight: 600;
+  user-select: none;
+}
+
+.taskList .count{
+  background-color: #dfdfdf;
+  color: #525252;
+  padding: 5px 10px;
+  border-radius: 50%;
+  margin-left: 10px;
+  user-select: none;
+}
+
+.taskList .clearAll{
+  background-color: #0f6af3;
+  color: #FFFFFF;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.taskList .clearAll:hover{
+  background-color: #1061db;
+}
+
+.taskList ul{
+  margin: 30px 5px 20px 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.taskList li{
+  padding: 15px 10px;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  gap: 5px;
+  width: 350px;
+  box-shadow: var(--box-shadow);
+  border-radius: 5px;
+  border-left: 5px solid #1365dfaf;
+}
+
+.taskList li:hover{
+  background-color: #f8f8f8;
+}
+
+.taskList li p{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.taskList li .taskName{
+  font-size: 18px;
+  padding-bottom: 5px;
+}
+
+.taskList li .taskTime{
+  font-size: 12px;
+  color: #737373;
+}
+
+.taskList i.bi-pencil-square{
+  font-size: 18px;
+  color: #1363DF;
+  cursor: pointer;
+}
+
+.taskList i.bi-trash{
+  font-size: 18px;
+  color: #D82148;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+  .taskList li{
+    width: 100%;
+  }
 }
